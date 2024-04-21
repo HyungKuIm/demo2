@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Index Page</title>
+<style>
+body { font-size:16pt; color: #999; }
+h1 {
+	font-size: 100pt; text-align: right; color: #f6f6f6;
+}
+</style>
+</head>
+<body>
+	<h1>Hello!</h1>
+	<p th:text="${msg}">이것은 샘플입니다</p>
+	<form method="post" action="/checkName">
+		<input type="text" name="name" th:value="${name}" placeholder="이름을 입력하세요"/>
+		<input type="submit" value="체크" />
+	</form>
+	<p th:text="${result}"></p>
+</body>
+</html>
